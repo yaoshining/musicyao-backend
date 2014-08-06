@@ -1,0 +1,13 @@
+.navbar-buttons {
+	height: 100%;
+	display: inline-block;
+}
+ul.my-nav {
+	height: 100%;
+	list-style: none;
+}
+.my-nav > li {
+	float: left;
+	border: 1px solid #000;
+	height: 100%;
+}
