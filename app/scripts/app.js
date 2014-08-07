@@ -25,8 +25,10 @@ define(function(){
         controller: 'MainCtrl',
         controllerUrl: 'controllers/main'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
+      .when('/:module', {
+        template: function($routeParams){
+          return "这是"+$routeParams.module+"页面。";
+        },
         controller: 'AboutCtrl',
         controllerUrl: 'controllers/about'
       })

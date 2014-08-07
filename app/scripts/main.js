@@ -61,6 +61,7 @@ requirejs([
 	'angular-lazyload',
 	'app/app',
 	'controllers/header',
+	'controllers/left',
 	'bootstrap'
 ],function($){
 	angular.bootstrap(document,['musicyaoBackendApp']);

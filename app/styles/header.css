@@ -1,13 +1,1 @@
-.navbar-buttons {
-	height: 100%;
-	display: inline-block;
-}
-ul.my-nav {
-	height: 100%;
-	list-style: none;
-}
-.my-nav > li {
-	float: left;
-	border: 1px solid #000;
-	height: 100%;
-}
+.header a{color:inherit;padding:0}.header .navbar-buttons{display:inline-block}.header ul.my-nav{list-style:none}.header ul.my-nav>li{float:left;height:45px;line-height:45px;border-left:1px solid #e1e1e1;position:relative;cursor:pointer}.header ul.my-nav>li:first-child{border-left-width:0}.header ul.my-nav>li>a{color:#fff;height:100%;padding:0 8px}.header ul.my-nav>li>a>.my-icon{width:20px;font-size:16px}.header ul.my-nav>li>a>.badge{position:relative;top:-2px;left:2px;padding:0 5px}.header ul.my-nav>li.grey>a{background-color:#555}.header ul.my-nav>li.purple>a{background-color:#892e65}.header ul.my-nav>li.green>a{background-color:#2e8965}.header ul.my-nav>li.light-blue>a{background-color:#579ec8}.header ul.my-nav .nav-user-photo{margin:-4px 8px 0 0;border-radius:100%;max-width:40px;border:2px solid #fff}.header ul.my-nav .user-info{max-width:100px;display:inline-block;line-height:15px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;text-align:left;vertical-align:top;position:relative;top:6px;font-size:12px}.header ul.my-nav .user-info small{display:block;font-size:85%;margin-bottom:3px}

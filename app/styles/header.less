@@ -1,0 +1,74 @@
+.header {
+	a {
+		color: inherit;
+		padding: 0;
+	}
+	.navbar-buttons {
+		display: inline-block;
+	}
+	ul.my-nav {
+		list-style: none;
+		& > li {
+			float: left;
+			height: 45px;
+			line-height: 45px;
+			border-left: 1px solid #E1E1E1;
+			position: relative;
+			cursor: pointer;
+			&:first-child {
+				border-left-width: 0;
+			}
+			& > a {
+				color: #FFF;
+				height: 100%;
+				padding: 0 8px;
+				& > .my-icon {
+					width: 20px;
+					font-size: 16px;
+				}
+				& > .badge {
+					position: relative;
+					top: -2px;
+					left: 2px;
+					padding: 0 5px;
+				}
+			}
+			&.grey > a {
+				background-color: #555;
+			}
+			&.purple > a {
+				background-color: #892e65;
+			}
+			&.green > a {
+				background-color: #2e8965;
+			}
+			&.light-blue > a {
+				background-color: #579ec8;
+			}
+		}
+		.nav-user-photo {
+			margin: -4px 8px 0 0;
+			border-radius: 100%;
+			max-width: 40px;
+			border: 2px solid #fff;
+		}
+		.user-info {
+			max-width: 100px;
+			display: inline-block;
+			line-height: 15px;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			text-align: left;
+			vertical-align: top;
+			position: relative;
+			top: 6px;
+			font-size: 12px;
+			small {
+				display: block;
+				font-size: 85%;
+				margin-bottom: 3px;
+			}
+		}
+	}
+}
