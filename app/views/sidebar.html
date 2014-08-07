@@ -1,4 +1,4 @@
-<div id="sidebar" class="sidebar" ng-controller="SidebarCtrl">
+<div id="sidebar" class="sidebar" ng-class="{'menu-mini': minimized}" ng-controller="SidebarCtrl">
 	<div class="sidebar-shortcuts" id="sidebar-shortcuts">
 		<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
 			<button class="btn btn-success">
@@ -14,6 +14,12 @@
 				<i class="my-icon fa fa-cogs"></i>
 			</button>			
 		</div>
+		<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
+			<span class="btn btn-success"></span>			
+			<span class="btn btn-info"></span>
+			<span class="btn btn-warning"></span>
+			<span class="btn btn-danger"></span>				
+		</div>
 	</div>
 	<ul class="nav nav-list">
 		<li ng-repeat="nav in navs" ng-class="{'active': isSelected($index)}">
@@ -24,6 +30,7 @@
 		</li>	
 	</ul>
 	<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-		<i class="my-icon fa fa-angle-double-left"></i>
+		<i class="my-icon fa fa-angle-double-left" ng-click="minimize()" ng-hide="minimized"></i>
+		<i class="my-icon fa fa-angle-double-right" ng-click="maximize()" ng-show="minimized"></i>
 	</div>
 </div>

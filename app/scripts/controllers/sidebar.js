@@ -10,6 +10,7 @@
 define(['app/app','css!styles/sidebar'],function(app){
 	app.register.controller('SidebarCtrl', function ($scope) {
 		var index = 0;
+		$scope.minimized = false;
 		$scope.navs = [{
 			name: "Dashbord",
 			url: "#",
@@ -44,6 +45,12 @@ define(['app/app','css!styles/sidebar'],function(app){
 		}
 		$scope.select = function($index){
 			index = $index;
+		}
+		$scope.minimize = function(){
+			$scope.minimized = true;
+		}
+		$scope.maximize = function(){
+			$scope.minimized = false;
 		}
 	});
 	return app;

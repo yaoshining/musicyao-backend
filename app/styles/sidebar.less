@@ -1,4 +1,58 @@
 .sidebar {
+	&.menu-mini {
+		width: 43px;
+		.sidebar-shortcuts-large {
+			display: none;
+		}
+		.sidebar-shortcuts-mini {
+			display: block;
+			background-color: #FFF;
+			padding: 2px 0;
+			.btn {
+				padding: 8px;
+				margin: -1px;
+				line-height: 0;
+				border-width: 0;
+				opacity: .85;
+				filter: alpha(opacity=85);
+			}
+		}
+		.nav-list {
+			li {
+				a {
+					padding: 0;
+					height: 39px;
+					text-align: center;
+					line-height: 37px;
+				}
+				&.active {
+					a {
+						&:after {
+							border-width: 10px 6px;
+							top: 8px;
+						}
+					}
+				}
+			}
+		}
+		.menu-text {
+			display: none;
+		}
+		.sidebar-toggle {
+			&:before {
+				left: 5px;
+				right: 5px;
+			}
+			& > .my-icon {
+				padding: 0 4px;
+				line-height: 15px;
+			}	
+		}
+	}
+	.sidebar-shortcuts-mini {
+		display: none;
+		width: 43px;
+	}
 	.sidebar-shortcuts {
 		text-align: center;
 		min-height: 40px;
