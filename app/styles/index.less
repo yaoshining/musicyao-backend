@@ -13,10 +13,17 @@ html,body {
 }
 .left-container {
 	position: absolute;
+	width: 190px;
 	left: 0;
 	top: 45px;
 	bottom: 0;
 	background-color: #f2f2f2;
+	&.left-mini {
+		width: 43px;
+		& + .right-container {
+			left: 43px;
+		}
+	}
 }
 .right-container {
 	position: absolute;

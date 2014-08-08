@@ -7,18 +7,28 @@
  * # SidebarCtrl
  * Controller of the musicyaoBackendApp
  */
-define(['app/app','css!styles/sidebar'],function(app){
+define(['app/app','css!styles/sidebar','directives/navs'],function(app){
 	app.register.controller('SidebarCtrl', function ($scope) {
 		var index = 0;
-		$scope.minimized = false;
 		$scope.navs = [{
 			name: "Dashbord",
 			url: "#",
 			iconStyle: "fa-tachometer"
 		},{
-			name: "UI & Elements",
-			url: "#/UIAndElements",
-			iconStyle: "fa-desktop"
+			name: "Tracks",
+			url: "",
+			iconStyle: "fa-desktop",
+			children: [{
+				name: "Layouts",
+				url: "",
+				children: [1,2,3]
+			},{
+				name: "Typography",
+				url: "#/Typography"
+			},{
+				name: "Elements",
+				url: "#/elements"
+			}]
 		},{
 			name: "Tables",
 			url: "#/tables",
@@ -44,13 +54,13 @@ define(['app/app','css!styles/sidebar'],function(app){
 			return $index === index;
 		}
 		$scope.select = function($index){
-			index = $index;
-		}
-		$scope.minimize = function(){
-			$scope.minimized = true;
-		}
-		$scope.maximize = function(){
-			$scope.minimized = false;
+			var nav = $scope.navs[$index];
+			var children = nav.children;
+			if(children && children.length>0){
+				nav.expand = !nav.expand;
+			}else {
+				index = $index;
+			}	
 		}
 	});
 	return app;

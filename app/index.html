@@ -24,7 +24,7 @@
     <!-- Add your site or application content here -->
     <div class="header" ng-controller="HeaderCtrl" ng-include="'views/header.html'"></div>
     <div class="container">
-      <div class="left-container" ng-controller="LeftCtrl">
+      <div class="left-container" ng-controller="LeftCtrl" ng-class="{'left-mini': minimized}">
         <div ng-include="templateUrl"></div>
       </div>
       <div class="right-container" ng-view></div>

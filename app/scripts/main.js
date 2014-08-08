@@ -7,6 +7,7 @@ requirejs.config({
 		styles: '../styles',
 		controllers: '../scripts/controllers',
 		services: '../scripts/services',
+		directives: '../scripts/directives',
 		jquery: [
 			'http://code.jquery.com/jquery-1.11.1.min',
 			libDir+'jquery/dist/jquery'
