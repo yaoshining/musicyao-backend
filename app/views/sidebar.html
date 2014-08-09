@@ -22,8 +22,8 @@
 		</div>
 	</div>
 	<ul class="nav nav-list">
-		<li ng-repeat="nav in navs" ng-class="{'active': isSelected($index),'hsub': nav.children,'open': nav.expand}">
-			<a ng-href="{{nav.url}}" ng-click="select($index)" ng-class="{'dropdown-toggle': nav.children}">
+		<li ng-repeat="nav in navs" ng-class="{'active': isSelected(nav),'hsub': nav.children,'open': nav.expand}">
+			<a ng-href="{{nav.url}}" ng-click="select(nav)" ng-class="{'dropdown-toggle': nav.children}">
 				<i class="menu-icon fa {{nav.iconStyle}}"></i>
 				<span class="menu-text">{{nav.name}}</span>
 				<b class="arrow fa fa-angle-down"></b>

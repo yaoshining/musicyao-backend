@@ -8,7 +8,7 @@
  * Controller of the musicyaoBackendApp
  */
 define(['app/app','css!styles/sidebar','directives/navs'],function(app){
-	app.register.controller('SidebarCtrl', function ($scope) {
+	app.register.controller('SidebarCtrl', function ($scope,$routeParams) {
 		var index = 0;
 		$scope.navs = [{
 			name: "Dashbord",
@@ -50,16 +50,16 @@ define(['app/app','css!styles/sidebar','directives/navs'],function(app){
 			url: "#/others",
 			iconStyle: "fa-file-o"
 		}];
-		$scope.isSelected = function($index){
-			return $index === index;
+		var selected = $routeParams.module?_.findWhere($scope.navs,{url: "#/"+$routeParams.module}):$scope.navs[0];
+		$scope.isSelected = function(nav){
+			return nav === selected;
 		}
-		$scope.select = function($index){
-			var nav = $scope.navs[$index];
+		$scope.select = function(nav){
 			var children = nav.children;
 			if(children && children.length>0){
 				nav.expand = !nav.expand;
 			}else {
-				index = $index;
+				selected = nav;
 			}	
 		}
 	});

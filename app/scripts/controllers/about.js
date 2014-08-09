@@ -9,12 +9,8 @@
  */
 define(['app/app'],function(app){
 	app.register
-	.controller('AboutCtrl', function ($scope) {
-	    $scope.awesomeThings = [
-	      'HTML5 Boilerplate',
-	      'AngularJS',
-	      'Karma'
-	    ];
+	.controller('AboutCtrl', function ($scope,$rootScope,$routeParams) {
+	    $rootScope.module = $routeParams.module;
   	});
 	return app;
 });

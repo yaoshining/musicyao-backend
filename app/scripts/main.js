@@ -16,6 +16,10 @@ requirejs.config({
 			'http://cdn.bootcss.com/bootstrap/3.2.0/js/bootstrap.min',
 			libDir+'bootstrap/dist/js/bootstrap'
 		],
+		underscore: [
+			'http://cdn.bootcss.com/underscore.js/1.6.0/underscore',
+			libDir+'underscore/underscore'
+		],
 		angular: libDir+'angular/angular',
 		'angular-resource': libDir+'angular-resource/angular-resource',
 		'angular-cookies': libDir+'angular-cookies/angular-cookies',
@@ -29,6 +33,9 @@ requirejs.config({
 		bootstrap: ['jquery'],
 		angular: {
 			exports: 'angular'
+		},
+		underscore: {
+			exports: "_"
 		},
 		'angular-resource': ['angular'],
 		'angular-cookies': ['angular'],
@@ -52,6 +59,7 @@ requirejs.config({
 });
 requirejs([
 	'jquery',
+	'underscore',
 	'angular',
 	'angular-resource',
 	'angular-cookies',
