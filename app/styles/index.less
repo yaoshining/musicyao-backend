@@ -2,10 +2,18 @@ html,body {
 	height: 100%;
 	color: #393939;
 }
+.disable-select (@select: none) {
+  -webkit-user-select: @select;
+  -moz-user-select: @select;
+  -ms-user-select: @select;
+  -o-user-select: @select;
+  user-select: @select;
+}
 .header {
 	background-color: #438eb9;
 	min-height: 45px;
 	height: 45px;
+	.disable-select;
 }
 .container {
 	padding: 0;
@@ -24,6 +32,9 @@ html,body {
 			left: 43px;
 		}
 	}
+}
+.left-container * {
+	.disable-select;
 }
 .right-container {
 	position: absolute;
@@ -67,14 +78,86 @@ html,body {
 	color: #93cbf9!important;
 }
 .icon-animated-bell {
-	animation: ringing 2s 5 ease 1s;
-	-webkit-animation: ringing 2s 5 ease 1s;
-	-moz-animation: ringing 2s 5 ease 1s;
-	-o-animation: ringing 2s 5 ease 1s;
-	-ms-animation: ringing 2s 5 ease 1s;
+	animation: ringing 2s infinite ease 1s;
+	-webkit-animation: ringing 2s infinite ease 1s;
+	-moz-animation: ringing 2s infinite ease 1s;
+	-o-animation: ringing 2s infinite ease 1s;
+	-ms-animation: ringing 2s infinite ease 1s;
 	transform-origin: 50% 0;
 	-webkit-transform-origin: 50% 0;
 	-o-transform-origin: 50% 0;
 	-moz-transform-origin: 50% 0;
 	-ms-transform-origin: 50% 0;	
+}
+.icon-animated-vertical {
+	display: inline-block;
+	-moz-animation: vertical 2s infinite ease 2s;
+	-webkit-animation: vertical 2s infinite ease 2s;
+	-o-animation: vertical 2s infinite ease 2s;
+	-ms-animation: vertical 2s infinite ease 2s;
+	animation: vertical 2s infinite ease 2s;
+}
+@-webkit-keyframes ringing {
+    0% {
+        -webkit-transform: rotate(-15deg)
+    }
+    2% {
+        -webkit-transform: rotate(15deg)
+    }
+    4% {
+        -webkit-transform: rotate(-18deg)
+    }
+    6% {
+        -webkit-transform: rotate(18deg)
+    }
+    8% {
+        -webkit-transform: rotate(-22deg)
+    }
+    10% {
+        -webkit-transform: rotate(22deg)
+    }
+    12% {
+        -webkit-transform: rotate(-18deg)
+    }
+    14% {
+        -webkit-transform: rotate(18deg)
+    }
+    16% {
+        -webkit-transform: rotate(-12deg)
+    }
+    18% {
+        -webkit-transform: rotate(12deg)
+    }
+    20% {
+        -webkit-transform: rotate(0deg)
+    }
+}
+@-webkit-keyframes vertical {
+	0% {
+	    -webkit-transform: translate(0,-3px)
+	}
+
+	4% {
+	    -webkit-transform: translate(0,3px)
+	}
+
+	8% {
+	    -webkit-transform: translate(0,-3px)
+	}
+
+	12% {
+	    -webkit-transform: translate(0,3px)
+	}
+
+	16% {
+	    -webkit-transform: translate(0,-3px)
+	}
+
+	20% {
+	    -webkit-transform: translate(0,3px)
+	}
+
+	22% {
+	    -webkit-transform: translate(0,0)
+	}
 }
